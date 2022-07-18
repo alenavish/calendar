@@ -152,12 +152,12 @@ class App(QWidget):
             mail = smtplib.SMTP('smtp.gmail.com', 587)
             mail.ehlo()
             mail.starttls()
-            mail.login('*****', '*****')
+            mail.login('*****', 'ххххх')
             recipient = self.ui.textEdit_2.toPlainText()
             mail_text = MIMEText(f"{self.ui.dateEdit_2.date().toString('dd.MM.yyyy')} {self.ui.textEdit.toPlainText()}",
                                  "", 'utf-8')
 
-            mail.sendmail("Alenka.vishnyakova@gmail.com", recipient, mail_text.as_string())
+            mail.sendmail("*****", recipient, mail_text.as_string())
             mail.quit()
             print("Напоминание успешно отправлено")
         except:
